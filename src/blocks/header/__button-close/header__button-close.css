@@ -10,7 +10,7 @@
   margin-left: 0px;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 620px) {
   .header__button-close {
     margin-top: 0px;
     margin-left: 24px;
