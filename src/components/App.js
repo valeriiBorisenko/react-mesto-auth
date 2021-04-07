@@ -145,7 +145,7 @@ function App() {
     .then(()=> {
       setIsInfoTooltip(true)
       setResultRegister(true)
-      history.push("/sign-in")
+      history.push('/sign-in')
     })
     .catch((err)=>{
       setIsInfoTooltip(true)
@@ -162,7 +162,7 @@ function App() {
       if(data.token){
         setLoggedIn(true)
         localStorage.setItem('userId', data.token)
-        history.push("/main")
+        history.push('/main')
         checkTokenUser()
       }
     })
@@ -175,8 +175,8 @@ function App() {
   }
 
   function checkTokenUser(){
-    if (localStorage.userId) {
-      let token = localStorage.userId;
+    if (localStorage.getItem('userId')) {
+      let token = localStorage.getItem('userId');
       auth
       .getUserToken(token)
       .then((res) => {
